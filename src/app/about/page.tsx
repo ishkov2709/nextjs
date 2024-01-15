@@ -1,5 +1,9 @@
-export const metadata = {
-  title: "About Page",
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "About",
+  },
 };
 
 export default function About() {
