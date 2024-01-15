@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: {
@@ -22,7 +23,7 @@ export default function RootLayout({
         <header
           style={{ backgroundColor: "#000", color: "#fff", padding: "1rem" }}
         >
-          <p>Header</p>
+          <Link href="/">Header</Link>
         </header>
         <main>{children}</main>
         <footer

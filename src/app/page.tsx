@@ -1,21 +1,16 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Home() {
-  const route = useRouter();
-
-  const goToPage = (path: string) => {
-    route.push(path);
-  };
   return (
     <>
       <h1>Home Page</h1>
-      <div>
-        <button onClick={() => goToPage("about")}>About</button>
-        <button onClick={() => goToPage("profile")}>Profile</button>
-        <button onClick={() => goToPage("blog")}>Blog</button>
-        <button onClick={() => goToPage("products")}>Products</button>
+      <div style={{ display: "flex", gap: "12px" }}>
+        <Link href="/blog">Blog</Link>
+        <Link href="/products">Products</Link>
+        <Link href="/profle">Profile</Link>
+        <Link href="/about">About</Link>
       </div>
     </>
   );
