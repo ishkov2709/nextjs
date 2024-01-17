@@ -12,6 +12,7 @@ export default function Home() {
         <Link href="/profle">Profile</Link>
         <Link href="/about">About</Link>
         <Link href="/complex-dashboard">Complex Dashboard</Link>
+        <Link href="/photo-feed">Photo Feed</Link>
       </div>
     </>
   );
