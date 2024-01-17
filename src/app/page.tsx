@@ -11,6 +11,7 @@ export default function Home() {
         <Link href="/products">Products</Link>
         <Link href="/profle">Profile</Link>
         <Link href="/about">About</Link>
+        <Link href="/complex-dashboard">Complex Dashboard</Link>
       </div>
     </>
   );
