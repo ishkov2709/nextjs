@@ -21,18 +21,23 @@ export default async function PhotoModal({ params }: IParamsId) {
         />
         <div
           style={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            width: "100%",
             display: "flex",
             justifyContent: "center",
-            gap: "8px",
-            fontWeight: 600,
+            gap: "14px",
+            fontWeight: 500,
             fontFamily: "sans-serif",
-            backgroundColor: "#fff",
-            padding: "10px 8px",
+            background: "#515151cc",
+            color: "#fff",
+            padding: "10px 0",
           }}
         >
-          <p>{views}</p>
-          <p>{likes}</p>
-          <p style={{ color: "yellowgreen" }}>{user}</p>
+          <p>Views: {views}</p>
+          <p>Likes: {likes}</p>
+          <p>User: {user}</p>
         </div>
       </div>
     </Modal>

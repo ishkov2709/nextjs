@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import {
   MouseEventHandler,
+  MutableRefObject,
   ReactNode,
   useCallback,
   useEffect,
@@ -29,6 +30,7 @@ const Modal = ({ children }: ModalProps) => {
   useEffect(() => {
     const body = document.body;
     body.style.overflowY = "hidden";
+    body.style.position = "relative";
 
     return () => {
       body.style.overflowY = "visible";
@@ -39,12 +41,16 @@ const Modal = ({ children }: ModalProps) => {
     <div
       onClick={onClick}
       style={{
-        backgroundColor: "#00000040",
+        backgroundColor: "#000000cc",
         position: "fixed",
+        top: 0,
+        left: 0,
         width: "100vw",
         height: "100vh",
 
         zIndex: 10,
+
+        animation: "opacity 250ms linear",
       }}
       ref={overlay}
     >
@@ -54,6 +60,8 @@ const Modal = ({ children }: ModalProps) => {
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
+
+          animation: "opacity 350ms linear",
         }}
       >
         {children}

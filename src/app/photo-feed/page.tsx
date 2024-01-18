@@ -13,14 +13,12 @@ const getData = async () => {
 export default async function PhotoFeed() {
   const data = await getData();
 
-  console.log(data.hits);
-
   return (
     <>
       <h1 style={{ textAlign: "center", marginBottom: "20px" }}>Photo Feed</h1>
       <div className="imgWrapper">
         {data.hits.map((el: { id: number; largeImageURL: string }) => (
-          <Link key={el.id} href={`/photo-feed/${el.id}`}>
+          <Link key={el.id} href={`/photo-feed/${el.id}`} scroll={false}>
             <Image
               src={el.largeImageURL}
               alt="img"
