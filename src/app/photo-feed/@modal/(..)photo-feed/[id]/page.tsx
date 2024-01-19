@@ -1,6 +1,13 @@
-import { getDataById } from "@/app/photo-feed/[id]/page";
 import Modal from "@/components/modal";
 import Image from "next/image";
+
+const getDataById = async (id: string) => {
+  const res = await fetch(
+    `https://pixabay.com/api/?key=35683515-755808cb63fe444becf5469f8&id=${id}`
+  );
+
+  return res.json();
+};
 
 export default async function PhotoModal({ params }: IParamsId) {
   const {

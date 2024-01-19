@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export const getDataById = async (id: string) => {
+const getDataById = async (id: string) => {
   const res = await fetch(
     `https://pixabay.com/api/?key=35683515-755808cb63fe444becf5469f8&id=${id}`
   );
