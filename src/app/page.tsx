@@ -9,7 +9,7 @@ export default function Home() {
       <div style={{ display: "flex", gap: "12px" }}>
         <Link href="/blog">Blog</Link>
         <Link href="/products">Products</Link>
-        <Link href="/profle">Profile</Link>
+        <Link href="/profile">Profile</Link>
         <Link href="/about">About</Link>
         <Link href="/complex-dashboard">Complex Dashboard</Link>
         <Link href="/photo-feed">Photo Feed</Link>

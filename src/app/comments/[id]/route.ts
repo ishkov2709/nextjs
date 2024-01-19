@@ -1,3 +1,4 @@
+import { redirect } from "next/navigation";
 import { comments } from "../data";
 
 interface IParams {
@@ -14,12 +15,7 @@ export async function GET(_: Request, { params }: IParams) {
   }
 
   if (!comment) {
-    return new Response(JSON.stringify({ message: "Not Found" }), {
-      headers: {
-        "Content-Type": "application/json",
-      },
-      status: 404,
-    });
+    redirect("/comments");
   }
 }
 
